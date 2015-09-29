@@ -1,6 +1,7 @@
+.ui-auto { transition: all .3s ease-in; }
 .ui {
-  .ui-auto { visibility: hidden; }
+  .ui-auto { opacity: 0; }
   &.ui-isauto {
-    .ui-auto { visibility: visible; }
+    .ui-auto { opacity: 1; }
   }
 }
