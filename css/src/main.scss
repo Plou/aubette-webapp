@@ -14,7 +14,6 @@
 @import 'tools/horizontal-list';
 @import 'tools/input';
 @import 'tools/page-sized';
-@import 'tools/vertical-align-middle';
 
 // Generic
 @import 'generic/reset';
@@ -32,8 +31,15 @@
 @import 'objects/highlights';
 @import 'objects/horizontal-list';
 @import 'objects/page-sized';
+@import 'objects/full-page';
+@import 'objects/bar';
+// UI
+@import 'objects/ui-switch';
+@import 'objects/ui-range';
+@import 'objects/ui-push';
 
 // Components
+@import 'components/ui';
 
 // Trumps
 @import 'trumps/print';

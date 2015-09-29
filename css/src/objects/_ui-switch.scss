@@ -1,0 +1,43 @@
+.ui-switch {
+  $ui-thumb-size: 26px !default;
+  $ui-switch-border: 2px !default;
+  $ui-switch-ratio: 2 !default;
+
+  $ui-dark-color: #777 !default;
+  $ui-light-color: #fff !default;
+  $ui-ok-color: #5cb85c !default;
+
+  $ui-switch-width: ($ui-thumb-size + (2 * $ui-switch-border)) * $ui-switch-ratio;
+  $ui-switch-offset: $ui-switch-width - ($ui-thumb-size + (2 * $ui-switch-border));
+
+  position: relative; width: $ui-switch-width; font-size: $ui-thumb-size / 2;
+
+  user-select: none;
+
+  .ui-switch-checkbox { display: none;}
+  .ui-switch-label {
+    display: block; border: $ui-switch-border solid $ui-dark-color; border-radius: $ui-thumb-size; padding: 0; height: $ui-thumb-size; background-color: $ui-light-color;
+
+    overflow: hidden; cursor: pointer; transition: background-color .3s ease-in;
+
+    line-height: $ui-thumb-size;
+  }
+  .ui-switch-label-on { position: absolute; left: $ui-thumb-size / 3; color: $ui-light-color; }
+  .ui-switch-label-off { position: absolute; right: $ui-thumb-size / 3; color: $ui-dark-color; }
+  .ui-switch-label:after {
+    display: block; position: absolute; top: 0; right: $ui-switch-offset; bottom: 0; margin: 0; border: $ui-switch-border solid $ui-dark-color; border-radius: $ui-thumb-size; width: $ui-thumb-size; background: $ui-light-color;
+
+    transition: all .3s ease-in 0s;
+
+    content: '';
+  }
+  .ui-switch-checkbox:checked + .ui-switch-label {
+    background-color: $ui-ok-color;
+  }
+  .ui-switch-checkbox:checked + .ui-switch-label, .ui-switch-checkbox:checked + .ui-switch-label:after {
+    border-color: $ui-ok-color;
+  }
+  .ui-switch-checkbox:checked + .ui-switch-label:after {
+    right: 0;
+  }
+}

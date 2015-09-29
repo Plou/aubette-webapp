@@ -1,0 +1,6 @@
+.ui {
+  .ui-auto { visibility: hidden; }
+  &.ui-isauto {
+    .ui-auto { visibility: visible; }
+  }
+}

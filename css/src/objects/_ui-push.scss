@@ -1,0 +1,15 @@
+.ui-push {
+  $ui-thumb-size: 26px !default;
+  $ui-push-border: 2px !default;
+
+  $ui-dark-color: #777 !default;
+  $ui-light-color: #fff !default;
+
+  [type="button"] {
+    box-sizing: content-box;
+    border: $ui-push-border solid $ui-dark-color; border-radius: $ui-thumb-size; width: $ui-thumb-size; height: $ui-thumb-size;
+    cursor: pointer;
+    line-height: $ui-thumb-size / 2; text-decoration: none; color: $ui-dark-color;
+  }
+
+}

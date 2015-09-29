@@ -1,6 +1,7 @@
 # Helpers
 #
 # getHash = require './components/getHash.coffee'
+Colorswitch = require('./components/Colorswitch.coffee')
 
 # jQuery helpers
 #
@@ -10,7 +11,7 @@
 #
 $( ->
   $(window).ready( ->
-
+    window.colorswitch = new Colorswitch('#color')
     # Handle src update on hover event
     # $('.no-touch img.hover').hoverSrc()
 

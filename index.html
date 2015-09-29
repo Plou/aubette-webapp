@@ -14,18 +14,20 @@
     <link rel="apple-touch-icon" href="/img/favicon.png">
   </head>
   <body>
-    <!--Header-->
-    <div id="header" class="header">
-            </div>
+    <!--Background-->
+    <div id="color" class="color full-page"></div>
 
-    <!--Content-->
-    <div id="content-main" class="page-sized">
-
-   </div>
-
-    <!--Footer-->
-    <div id="footer" class="footer">
-      
+    <!--Controls-->
+    <div id="ui" class="ui ui-isauto bar bar-footer">
+      <ul class="ui-controls horizontal-list vertical-align-middle">
+        <li class="ui-control ui-control-help ui-push"><button type="button">?</button></li>
+        <li class="ui-control ui-control-range ui-range ui-auto"><input type="range"  min="0" max="100" /></li>
+        <li class="ui-control ui-control-random ui-push ui-auto"><button type="button">#</button></li>
+        <li class="ui-control ui-control-switch ui-switch">
+          <input type="checkbox" name="ui-switch" class="ui-switch-checkbox" id="control-switch" checked>
+          <label class="ui-switch-label" for="control-switch"><span class="ui-switch-label-on">A</span> <span class="ui-switch-label-off">M</span></label>
+        </li>
+      </ul>
     </div>
 
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

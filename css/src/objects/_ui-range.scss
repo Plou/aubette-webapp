@@ -1,0 +1,97 @@
+.ui-range {
+  $ui-range-border: 2px;
+
+  $ui-thumb-size: 26px !default;
+  $ui-range-track-height: 10px !default;
+
+  $ui-range-slider-size: $ui-thumb-size + 2 * $ui-range-border;
+
+  $ui-range-track-radius: $ui-range-slider-size !default;
+
+  $ui-range-slider-offset: ($ui-range-slider-size - $ui-range-track-height) / 2;
+
+  $ui-dark-color: #777 !default;
+  $ui-light-color: #fff !default;
+
+  [type=range] {
+    margin: $ui-range-slider-offset 0;
+    width: 100%;
+    background: transparent;
+
+    -webkit-appearance: none;
+  }
+  [type=range]:focus {
+    outline: none;
+  }
+  [type=range]::-webkit-slider-runnable-track {
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-radius: $ui-range-track-radius;
+    width: 100%;
+    height: $ui-range-track-height;
+    background: $ui-dark-color;
+    cursor: pointer;
+  }
+  [type=range]::-webkit-slider-thumb {
+    margin-top: - $ui-range-slider-offset;
+    border: $ui-range-border solid $ui-dark-color;
+    border-radius: $ui-range-slider-size;
+    width: $ui-range-slider-size;
+    height: $ui-range-slider-size;
+    background: $ui-light-color;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+  }
+  [type=range]:focus::-webkit-slider-runnable-track {
+    background: $ui-dark-color;
+  }
+  [type=range]::-moz-range-track {
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-radius: $ui-range-track-radius;
+    width: 100%;
+    height: $ui-range-track-height;
+    background: $ui-dark-color;
+    cursor: pointer;
+  }
+  [type=range]::-moz-range-thumb {
+    border: $ui-range-border solid $ui-dark-color;
+    border-radius: $ui-range-slider-size;
+    width: $ui-range-slider-size;
+    height: $ui-range-slider-size;
+    background: $ui-light-color;
+    cursor: pointer;
+  }
+  [type=range]::-ms-track {
+    border-color: transparent;
+    width: 100%;
+    height: $ui-range-track-height;
+    background: transparent;
+    cursor: pointer;
+    color: transparent;
+  }
+  [type=range]::-ms-fill-lower {
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-radius: $ui-range-track-radius;
+    background: $ui-dark-color;
+  }
+  [type=range]::-ms-fill-upper {
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-radius: $ui-range-track-radius;
+    background: $ui-dark-color;
+  }
+  [type=range]::-ms-thumb {
+    border: $ui-range-border solid $ui-dark-color;
+    border-radius: $ui-range-slider-size;
+    width: $ui-range-slider-size;
+    height: $ui-range-track-height;
+    background: $ui-light-color;
+    cursor: pointer;
+  }
+  [type=range]:focus::-ms-fill-lower {
+    background: $ui-dark-color;
+  }
+  [type=range]:focus::-ms-fill-upper {
+    background: $ui-dark-color;
+  }
+
+}
