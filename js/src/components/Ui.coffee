@@ -69,8 +69,9 @@ class Ui
     'ui-push': ->
       return true
 
+      # Depracated
     'ui-range': ($el) ->
-      return $el.find('[type=range]').get(0).value / 100
+      return
 
     'ui-switch': ($el) ->
       value = 'switch'
@@ -89,7 +90,7 @@ class Ui
 
       # Depracated
       'ui-range': (value) =>
-        return @
+        return
 
       'ui-switch': =>
         @toggleMode()

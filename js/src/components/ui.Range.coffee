@@ -10,7 +10,7 @@ class Range
     @bind(@$input)
 
   setValue: (value) ->
-    @input.value = value * 100
+    @input.value = ((-1 * value ) + 1) * 100
     return @
 
   getValue: ->
