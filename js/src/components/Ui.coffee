@@ -89,7 +89,7 @@ class Ui
         return @
 
       # Depracated
-      'ui-range': (value) =>
+      'ui-range': (value) ->
         return
 
       'ui-switch': =>

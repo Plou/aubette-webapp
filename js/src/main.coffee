@@ -3,6 +3,7 @@
 # getHash = require './components/getHash.coffee'
 Colorswitch = require('./components/Colorswitch.coffee')
 Ui = require('./components/Ui.coffee')
+Splash = require('./components/Splash.coffee')
 
 # jQuery helpers
 #
@@ -12,7 +13,17 @@ Ui = require('./components/Ui.coffee')
 #
 $( ->
   $(window).ready( ->
+    splash = new Splash('<h1>Splash !</h1>')
     controls = new Ui('#ui', Colorswitch, '#color')
+
+    setTimeout(->
+      splash.close()
+      setTimeout(->
+        splash.delete()
+      , 1000
+      )
+    , 5000
+    )
     # Handle src update on hover event
     # $('.no-touch img.hover').hoverSrc()
 
