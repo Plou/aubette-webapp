@@ -1,7 +1,7 @@
 .popin {
   box-sizing: border-box;
-  position: fixed; top: 10px; right: 10px; left: 10px;
-  border-radius: 2px; padding-bottom: 90px; height: 100%;
+  position: fixed; right: 10px; left: 10px;
+  border-radius: 2px; padding-bottom: 90px; height: 480px; max-height: 90%;
   background-color: rgba($white, 1); cursor: pointer;
   transition: top .3s ease-in;
   z-index: 10;
@@ -31,5 +31,5 @@
   iframe { width: 100% !important; height: 100% !important; }
 }
 
-.popin-isopen { top: 10px; }
-.popin-isclose { top: 100%; }
+.popin-isopen { bottom: 0; }
+.popin-isclose { bottom: 100%; }

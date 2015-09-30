@@ -1,4 +1,10 @@
-.help { margin-bottom: 30px;
+.help {
+  margin: 0 auto 30px; max-width: 260px;
+
+  @media screen and #{$media-landscape} {
+    margin: 0 0 30px;
+  }
+
   .help-title { text-align: center;
     @media screen and #{$media-landscape} {
       display: none; text-align: left;
@@ -21,7 +27,11 @@
     }
   }
 
-  .help-icon { display: inline-block; box-sizing: border-box; margin: 0 20px 0 0; width: 56px; height: 30px; text-align: center; }
+  .help-icon { display: inline-block; box-sizing: border-box; margin: 0 20px 0 0; width: 56px; height: 30px; text-align: center;
+    @media screen and #{$media-landscape} {
+      margin-right: 10px;
+    }
+  }
   .help-label { display: inline-block; margin: 0; height: 30px; font-weight: $fw-light; }
 }
 
@@ -30,9 +40,9 @@
   .addtohome-icon { margin: 0 5px; vertical-align: middle; }
 
   @media screen and #{$media-landscape} {
-    position: absolute; top: 40px; right: 30px;
+    position: absolute; top: 30px; right: 15px; text-align: right;
 
-    .help-title { display: block; }
+    .help-title { display: block; text-align: right; }
   }
 }
 
