@@ -13,14 +13,13 @@ Splash = require('./components/Splash.coffee')
 #
 $( ->
   $(window).ready( ->
-
     if window.navigator.standalone? && window.navigator.standalone
       $('body').addClass('device-ios device-standalone')
       $('body').removeClass('device-help')
 
     if /iPad|iPhone|iPod/.test(navigator.platform)
       $('body').addClass('device-ios')
-    else if /Android|android/.test(navigator.platform)
+    else if /Android|android|Linux/.test(navigator.platform)
       $('body').addClass('device-android')
     else
       $('body').addClass('device-other')
