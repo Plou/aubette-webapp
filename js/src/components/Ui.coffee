@@ -4,13 +4,14 @@
 # @return [Ui]
 
 Range = require('./ui.Range.coffee')
+Popin = require('./Popin.coffee')
 
 
 class Ui
   constructor: (selector, Interface, interfaceSelector) ->
     @interface = new Interface(interfaceSelector)
     @setControls(selector)
-
+    @popin = new Popin('<h1>help!</h1>')
     @switch('auto')
     @bindControls()
     return @
@@ -78,7 +79,7 @@ class Ui
   do: ->
     return {
       'ui-help': =>
-        console.log('showHelp')
+        @popin.open()
         return @
 
       'ui-random': =>
