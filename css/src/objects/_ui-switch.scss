@@ -17,19 +17,25 @@
   .ui-switch-checkbox { display: none;}
   .ui-switch-label {
     display: block; border: $ui-switch-border solid $ui-dark-color; border-radius: $ui-thumb-size; padding: 0; height: $ui-thumb-size; background-color: $ui-light-color;
-
     overflow: hidden; cursor: pointer; transition: background-color .3s ease-in;
-
     line-height: $ui-thumb-size;
+
+    box-shadow: 0 0 2px rgba($black, .2) inset;
+
   }
   .ui-switch-label-on { position: absolute; left: $ui-thumb-size / 3; color: $ui-light-color; }
   .ui-switch-label-off { position: absolute; right: $ui-thumb-size / 3; color: $ui-dark-color; }
   .ui-switch-label:after {
     display: block; position: absolute; top: 0; right: $ui-switch-offset; bottom: 0; margin: 0; border: $ui-switch-border solid $ui-dark-color; border-radius: $ui-thumb-size; width: $ui-thumb-size; background: $ui-light-color;
-
     transition: all .3s ease-in 0s;
 
     content: '';
+
+    box-shadow: 0 0 3px rgba($black, .3);
+
+    &:hover {
+      box-shadow: 0 0 4px rgba($black, .5);
+    }
   }
   .ui-switch-checkbox:checked + .ui-switch-label {
     background-color: $ui-ok-color;

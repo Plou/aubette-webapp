@@ -79,7 +79,7 @@ class Ui
   do: ->
     return {
       'ui-help': =>
-        @popin.open()
+        @popin.toggle()
         return @
 
       'ui-random': =>

@@ -1,7 +1,7 @@
-.ui-auto { transition: all .3s ease-in; }
+.ui-auto { position: relative; transition: all .3s ease-in; }
 .ui {
-  .ui-auto { opacity: 0; }
+  .ui-auto { top: 80px; }
   &.ui-isauto {
-    .ui-auto { opacity: 1; }
+    .ui-auto { top: 0; }
   }
 }

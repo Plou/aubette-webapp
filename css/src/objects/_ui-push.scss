@@ -10,6 +10,12 @@
     border: $ui-push-border solid $ui-dark-color; border-radius: $ui-thumb-size; width: $ui-thumb-size; height: $ui-thumb-size;
     cursor: pointer;
     line-height: $ui-thumb-size / 2; text-decoration: none; color: $ui-dark-color;
+
+    box-shadow: 0 0 3px rgba($black, .3);
+
+    &:hover {
+      box-shadow: 0 0 4px rgba($black, .5);
+    }
   }
 
 }

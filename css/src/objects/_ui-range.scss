@@ -8,7 +8,7 @@
 
   $ui-range-track-radius: $ui-range-slider-size !default;
 
-  $ui-range-slider-offset: ($ui-range-slider-size - $ui-range-track-height) / 2;
+  $ui-range-slider-offset: ($ui-range-slider-size - ($ui-range-track-height - 2 * $ui-range-border)) / 2;
 
   $ui-dark-color: #777 !default;
   $ui-light-color: #fff !default;
@@ -24,12 +24,13 @@
     outline: none;
   }
   [type=range]::-webkit-slider-runnable-track {
-    border: 0 solid rgba(0, 0, 0, 0);
+    border: $ui-range-border solid $ui-dark-color;
     border-radius: $ui-range-track-radius;
     width: 100%;
     height: $ui-range-track-height;
-    background: $ui-dark-color;
     cursor: pointer;
+
+    box-shadow: 0 0 1px rgba($black, .2) inset;
   }
   [type=range]::-webkit-slider-thumb {
     margin-top: - $ui-range-slider-offset;
@@ -41,17 +42,21 @@
     cursor: pointer;
 
     -webkit-appearance: none;
+    box-shadow: 0 0 3px rgba($black, .3);
+
+    &:hover {
+      box-shadow: 0 0 4px rgba($black, .5);
+    }
   }
-  [type=range]:focus::-webkit-slider-runnable-track {
-    background: $ui-dark-color;
-  }
+
   [type=range]::-moz-range-track {
-    border: 0 solid rgba(0, 0, 0, 0);
+    border: $ui-range-border solid $ui-dark-color;
     border-radius: $ui-range-track-radius;
     width: 100%;
     height: $ui-range-track-height;
-    background: $ui-dark-color;
     cursor: pointer;
+
+    box-shadow: 0 0 2px rgba($black, .2) inset;
   }
   [type=range]::-moz-range-thumb {
     border: $ui-range-border solid $ui-dark-color;
@@ -60,6 +65,12 @@
     height: $ui-range-slider-size;
     background: $ui-light-color;
     cursor: pointer;
+
+    box-shadow: 0 0 3px rgba($black, .3);
+
+    &:hover {
+      box-shadow: 0 0 4px rgba($black, .5);
+    }
   }
   [type=range]::-ms-track {
     border-color: transparent;
@@ -86,6 +97,12 @@
     height: $ui-range-track-height;
     background: $ui-light-color;
     cursor: pointer;
+
+    box-shadow: 0 0 3px rgba($black, .3);
+
+    &:hover {
+      box-shadow: 0 0 3px rgba($black, .5);
+    }
   }
   [type=range]:focus::-ms-fill-lower {
     background: $ui-dark-color;

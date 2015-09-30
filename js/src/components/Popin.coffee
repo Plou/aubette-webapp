@@ -18,13 +18,26 @@
       $('body').append(@$el)
       return this
 
+    toggle: ->
+      if @isOpen
+        @close()
+      else
+        @open()
+      return this
+
     open: ->
-      @$el.show()
+      @$el.addClass('popin-isopen')
+      @isOpen = true
+      @$el.removeClass('popin-isclose')
+      @isClose = false
       @$el.trigger('open')
       return this
 
     close: ->
-      @$el.hide()
+      @$el.addClass('popin-isclose')
+      @isClose = true
+      @$el.removeClass('popin-isopen')
+      @isOpen = false
       @$el.trigger('close')
       return this
 
