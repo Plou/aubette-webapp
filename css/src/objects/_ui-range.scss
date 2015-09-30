@@ -28,6 +28,7 @@
     border-radius: $ui-range-track-radius;
     width: 100%;
     height: $ui-range-track-height;
+    background-color: $ui-light-color;
     cursor: pointer;
 
     box-shadow: 0 0 1px rgba($black, .2) inset;
@@ -54,6 +55,7 @@
     border-radius: $ui-range-track-radius;
     width: 100%;
     height: $ui-range-track-height;
+    background-color: $ui-light-color;
     cursor: pointer;
 
     box-shadow: 0 0 2px rgba($black, .2) inset;

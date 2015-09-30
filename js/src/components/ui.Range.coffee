@@ -14,7 +14,7 @@ class Range
     return @
 
   getValue: ->
-    return @input.value / 100
+    return (-1 * (@input.value / 100)) + 1
 
   trigger: (event, data) ->
     return @_emitter.trigger(event, data)
