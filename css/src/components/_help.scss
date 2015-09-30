@@ -37,13 +37,13 @@
 
 .addtohome { text-align: center;
 
-  .addtohome-icon { margin: 0 5px; vertical-align: middle; }
-
   @media screen and #{$media-landscape} {
     position: absolute; top: 30px; right: 15px; text-align: right;
 
     .help-title { display: block; text-align: right; }
   }
+
+  .addtohome-icon { margin: 0 5px; vertical-align: middle; }
 }
 
 .addtohome-ios { display: none; }
