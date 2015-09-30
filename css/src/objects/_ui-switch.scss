@@ -7,10 +7,11 @@
   $ui-light-color: #fff !default;
   $ui-ok-color: #5cb85c !default;
 
-  $ui-switch-width: ($ui-thumb-size + (2 * $ui-switch-border)) * $ui-switch-ratio;
-  $ui-switch-offset: $ui-switch-width - ($ui-thumb-size + (2 * $ui-switch-border));
+  $ui-thumb-full-size: $ui-thumb-size + (2 * $ui-switch-border);
+  $ui-switch-width: $ui-thumb-full-size * $ui-switch-ratio;
+  $ui-switch-offset: $ui-switch-width - $ui-thumb-full-size;
 
-  position: relative; width: $ui-switch-width; font-size: $ui-thumb-size / 2;
+  position: relative; width: $ui-switch-width; max-height: $ui-thumb-full-size; font-size: $ui-thumb-size / 2;
 
   user-select: none;
 
@@ -18,7 +19,7 @@
   .ui-switch-label {
     display: block; border: $ui-switch-border solid $ui-dark-color; border-radius: $ui-thumb-size; padding: 0; height: $ui-thumb-size; background-color: $ui-light-color;
     overflow: hidden; cursor: pointer; transition: background-color .3s ease-in;
-    line-height: $ui-thumb-size;
+    font-size: 1.4em; line-height: $ui-thumb-size;
 
     box-shadow: 0 0 2px rgba($black, .2) inset;
 

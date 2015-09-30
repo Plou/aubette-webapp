@@ -4,4 +4,6 @@
   &.ui-isauto {
     .ui-auto { top: 0; }
   }
+
 }
+.ui-control, .ui-control * { font-weight: $fw-bold; }

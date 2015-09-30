@@ -1,0 +1,52 @@
+.help { margin-bottom: 30px;
+  .help-title { text-align: center;
+    @media screen and #{$media-landscape} {
+      display: none; text-align: left;
+    }
+  }
+}
+.help:last-child { margin-bottom: 0; }
+
+.help-list {
+  margin: 0; padding: 0; list-style: none;
+
+  .help-item { display: block; margin: 20px 0; padding: 0; list-style: none; vertical-align: middle;
+    @media screen and #{$media-landscape} {
+      margin: 10px 0;
+
+      .device-standalone & { margin: 15px 0; }
+    }
+    @media screen and #{$media-squeezed} {
+      margin: 5px 0;
+    }
+  }
+
+  .help-icon { display: inline-block; box-sizing: border-box; margin: 0 20px 0 0; width: 56px; height: 30px; text-align: center; }
+  .help-label { display: inline-block; margin: 0; height: 30px; font-weight: $fw-light; }
+}
+
+.addtohome { text-align: center;
+
+  .addtohome-icon { margin: 0 5px; vertical-align: middle; }
+
+  @media screen and #{$media-landscape} {
+    position: absolute; top: 40px; right: 30px;
+
+    .help-title { display: block; }
+  }
+}
+
+.addtohome-ios { display: none; }
+.device-ios.device-help {
+  .addtohome-ios { display: block; }
+}
+
+.addtohome-android { display: none; }
+.device-android.device-help {
+  .addtohome-android { display: block; }
+}
+
+.addtohome-other { display: none; }
+.device-other.device-help {
+  .addtohome-other { display: block; }
+}

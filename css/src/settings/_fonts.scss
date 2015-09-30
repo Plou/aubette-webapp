@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700);
 ////
 /// Fonts
 ///
@@ -8,11 +9,12 @@
 
 /// Font fomily
 $arial: Arial, sans-serif;
-$font: $arial;
+$open: 'Open Sans', sans-serif;
+$font: $open;
 
 /// Fonts weight
 /// They must reflect avalaible weights
 $fw-light: 300;
 $fw-regular: 400;
-$fw-semibold: 500;
+$fw-semibold: 600;
 $fw-bold: 700;

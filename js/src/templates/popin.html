@@ -1,6 +1,56 @@
 <div class="popin">
   <div class="popin-content">
-    <h1>Help !</h1>
+    <div class="help">
+      <div class="help-control">
+        <h2 class="help-title">Controls</h2>
+        <ul class="help-list ui-fake-controls">
+          <li class="help-item ui-control ui-control-help ui-push">
+            <div class="help-icon">
+              <button type="button">?</button>
+            </div>
+            <div class="help-label">
+              Toggle this screen
+            </div>
+          </li>
+
+          <li data-action="ui-range" data-type="ui-range" class="help-item help-icon ui-control ui-control-range ui-range ui-auto">
+            <input type="range"  min="0" max="100" />
+          </li>
+          <li class="help-item help-label">Change speed</li>
+
+          <li data-action="ui-random" data-type="ui-push" class="help-item ui-control ui-control-random ui-push ui-auto">
+            <div class="help-icon">
+              <button type="button">#</button>
+            </div>
+            <div class="help-label">
+              Random speed
+            </div>
+          </li>
+
+          <li data-action="ui-switch" data-type="ui-switch" class="help-item help-icon ui-control ui-control-switch ui-switch">
+            <input type="checkbox" name="ui-switch" class="ui-switch-checkbox" id="fake-control-switch" checked>
+            <label class=" help-icon ui-switch-label ui-prevent-click" for="fake-control-switch">
+              <span class="ui-switch-label-on ui-prevent-click">A</span> <span class="ui-switch-label-off ui-prevent-click">M</span>
+            </label>
+          </li>
+          <li class="help-item help-label">
+            Switch Auto / Manual
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="help">
+      <div class="help-addtohome addtohome">
+        <div class="addtohome-android">
+          <h2 class="help-title">Add to home</h2>
+          <p>Tap <img class="addtohome-icon" src="/img/share_button_android.png" alt="share"  width="30"> then <br><strong>Add to homescreen</strong></p>
+        </div>
+        <div class="addtohome-ios">
+          <h2 class="help-title">Add to home</h2>
+          <p>Tap <img class="addtohome-icon" src="/img/share_button_ios.png" alt="share"  width="25"> then <img class="addtohome-icon" src="/img/add_button_ios.png" alt="add to home" width="35"></p>
+        </div>
+      </div>
+    </div>
   </div>
   <button class="icon-fermeture">x</button>
 </div>

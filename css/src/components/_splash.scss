@@ -1,7 +1,8 @@
 .splash {
+  box-sizing: border-box;
   position: fixed; top: 0; right: 0; bottom: 0; left: 0;
   border-radius: 2px; padding-bottom: 90px; height: 100%;
-  background: $black url('../img/') center center no-repeat; cursor: pointer;
+  background: $white url('../img/Android/144.png') center center no-repeat; cursor: pointer;
   transition: opacity 1s ease-in;
   z-index: 200;
   color: $white;
