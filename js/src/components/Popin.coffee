@@ -7,13 +7,14 @@
   class Popin
     constructor: (content) ->
       @popinClass ?= 'popin'
+      @template ?= require('../templates/popin.html')
       @create(content)
       @close()
       @bind()
       return this
 
     create: (content) ->
-      @$el = $('<div class="' + @popinClass + '"><div class="' + @popinClass + '-content"></div><button class="icon-fermeture">x</button></div>')
+      @$el = $(@template)
       @$elContent = @$el.find('.' + @popinClass + '-content')
       @$elContent.html(content)
       $('body').append(@$el)

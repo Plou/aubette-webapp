@@ -13,7 +13,7 @@ Splash = require('./components/Splash.coffee')
 #
 $( ->
   $(window).ready( ->
-    splash = new Splash('<h1>Splash !</h1>')
+    splash = new Splash()
     controls = new Ui('#ui', Colorswitch, '#color')
 
     setTimeout(->

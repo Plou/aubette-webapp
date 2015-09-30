@@ -11,7 +11,7 @@ class Ui
   constructor: (selector, Interface, interfaceSelector) ->
     @interface = new Interface(interfaceSelector)
     @setControls(selector)
-    @popin = new Popin('<h1>help!</h1>')
+    @popin = new Popin()
     @switch('auto')
     @bindControls()
     return @
