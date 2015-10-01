@@ -3,7 +3,7 @@
   position: fixed; right: 10px; left: 10px;
   border-radius: 2px; padding-bottom: 90px; height: 480px; max-height: 95%;
   background-color: rgba($white, 1); cursor: pointer;
-  transition: top .3s ease-in;
+  transition: bottom .3s ease-in;
   z-index: 10;
   color: $black;
 
@@ -32,4 +32,4 @@
 }
 
 .popin-isopen { bottom: 0; }
-.popin-isclose { bottom: 100%; }
+.popin-isclose { bottom: -500px; }
