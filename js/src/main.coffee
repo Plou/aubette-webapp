@@ -4,7 +4,7 @@
 Colorswitch = require('./components/Colorswitch.coffee')
 Ui = require('./components/Ui.coffee')
 Splash = require('./components/Splash.coffee')
-
+Mondrian = require('./components/Mondrian.coffee')
 # jQuery helpers
 #
 
@@ -26,6 +26,9 @@ $( ->
 
     splash = new Splash()
     controls = new Ui('#ui', Colorswitch, '#color')
+    window.mondiran = new Mondrian('#mondiran')
+    
+    mondiran.compose()
 
     setTimeout(->
       splash.close()
@@ -33,7 +36,8 @@ $( ->
         splash.delete()
       , 1000
       )
-    , 3000
+    , 0
     )
+
   )
 )
