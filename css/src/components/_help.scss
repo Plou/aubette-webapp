@@ -16,7 +16,7 @@
 .help-list {
   margin: 0; padding: 0; list-style: none;
 
-  .help-item { display: block; margin: 20px 0; padding: 0; list-style: none; vertical-align: middle;
+  .help-item { display: block; margin: 0 0 20px; padding: 0; list-style: none; vertical-align: middle;
     @media screen and #{$media-landscape} {
       margin: 10px 0;
 
@@ -25,9 +25,12 @@
     @media screen and #{$media-squeezed} {
       margin: 5px 0;
     }
+    &.help-icon,
+    &.help-label { margin-bottom: 20px; }
   }
 
   .help-icon { display: inline-block; box-sizing: border-box; margin: 0 20px 0 0; width: 56px; height: 30px; text-align: center;
+
     @media screen and #{$media-landscape} {
       margin-right: 10px;
     }

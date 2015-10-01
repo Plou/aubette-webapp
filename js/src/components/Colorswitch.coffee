@@ -36,6 +36,16 @@ class Colorswitch
     @status = 'started'
     return @
 
+  hide: ->
+    @stop()
+    @$body.fadeOut(300).hide()
+    return @
+
+  show: ->
+    @updateSpeed()
+    @$body.fadeIn(300).show()
+    return @
+
   start: ->
     @timer = setInterval( =>
       @updateColor()

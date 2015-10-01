@@ -8,11 +8,12 @@ Popin = require('./Popin.coffee')
 
 
 class Ui
-  constructor: (selector, Interface, interfaceSelector) ->
-    @interface = new Interface(interfaceSelector)
+  constructor: (selector, screens) ->
+    @setScreens(screens)
+    @switchScreen(screens[0].id)
     @setControls(selector)
     @popin = new Popin()
-    @switch('auto')
+    @switchMode('auto')
     @bindControls()
     return @
 
@@ -23,12 +24,42 @@ class Ui
       range: new Range('[data-action="ui-range"]')
     return @
 
+  setScreens: (screens) ->
+    @screens = []
+    @screenIds = []
+    for screen in screens
+      @screenIds.push(screen.id)
+      @screens[screen.id] = new screen.class(screen.selector)
+      @screens[screen.id].hide()
+    return @
+
+
   start: ->
-    @interface.start()
+    @screen.start()
     return @
 
   stop: ->
-    @interface.stop()
+    @screen.stop()
+    return @
+
+  switchScreen: (id) ->
+    if @screen?
+      @screen.hide()
+      speed = @screen.getSpeedRatio()
+
+    @screen = @screens[id]
+    @screenCurrent = id
+    if speed?
+      @screen.setSpeed(speed)
+
+    @screen.show()
+
+    if @mode == "manual"
+      @setManual()
+    return @
+
+  toggleScreen: ->
+    @switchScreen(if @screenCurrent == 'mondrian' then 'color' else 'mondrian')
     return @
 
   setAuto: ->
@@ -44,10 +75,11 @@ class Ui
     return @
 
   toggleMode: ->
-    @switch(if @mode == 'manual' then 'auto' else 'manual')
+    @switchMode(if @mode == 'manual' then 'auto' else 'manual')
     return @
 
-  switch: (mode) ->
+
+  switchMode: (mode) ->
     switch mode
       when 'auto'
         @setAuto()
@@ -84,24 +116,27 @@ class Ui
         return @
 
       'ui-random': =>
-        @interface.setSpeed()
-        @control.range.setValue(@interface.getSpeedRatio())
+        @screen.setSpeed()
+        @control.range.setValue(@screen.getSpeedRatio())
         return @
 
       # Depracated
       'ui-range': (value) ->
         return
 
-      'ui-switch': =>
+      'ui-control-switch': =>
         @toggleMode()
+        return @
+
+      'ui-screen-switch': =>
+        @toggleScreen()
         return @
     }
 
   bindControls: ->
     @control.range.on('change', (e, value) =>
-      @interface.setSpeed(value)
+      @screen.setSpeed(value)
     )
-
     @controls.on('click', (e) =>
       if $(e.target).not('.ui-prevent-click').length
         $control = $(e.target).closest('.ui-control')

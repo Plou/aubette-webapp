@@ -29,16 +29,20 @@
     <!--Background-->
     <div id="color" class="color full-page"></div>
 
-    <canvas id="mondiran" class="full-page" width="400" height="400"></canvas>
+    <canvas id="mondrian" class="full-page" width="400" height="400"></canvas>
 
     <a class="btn" id="save" download="mondrian.png" href="#">Save Image</a>
     <!--Controls-->
     <div id="ui" class="ui ui-isauto bar bar-footer">
       <ul class="ui-controls horizontal-list vertical-align-middle">
         <li data-action="ui-help" data-type="ui-push" class="ui-control ui-control-help ui-push"><button type="button">?</button></li>
+        <li data-action="ui-screen-switch" data-type="ui-switch" class="ui-control ui-screen-switch ui-switch">
+          <input type="checkbox" name="ui-switch" class="ui-switch-checkbox" id="screen-switch">
+          <label class="ui-switch-label ui-prevent-click" for="screen-switch"><!-- <span class="ui-switch-label-on ui-prevent-click">C</span> <span class="ui-switch-label-off ui-prevent-click">M</span>--></label>
+        </li>
         <li data-action="ui-range" data-type="ui-range" class="ui-control ui-control-range ui-range ui-auto"><input type="range"  min="0" max="100" /></li>
         <li data-action="ui-random" data-type="ui-push" class="ui-control ui-control-random ui-push ui-auto"><button type="button">#</button></li>
-        <li data-action="ui-switch" data-type="ui-switch" class="ui-control ui-control-switch ui-switch">
+        <li data-action="ui-control-switch" data-type="ui-switch" class="ui-control ui-control-switch ui-switch">
           <input type="checkbox" name="ui-switch" class="ui-switch-checkbox" id="control-switch" checked>
           <label class="ui-switch-label ui-prevent-click" for="control-switch"><span class="ui-switch-label-on ui-prevent-click">A</span> <span class="ui-switch-label-off ui-prevent-click">M</span></label>
         </li>

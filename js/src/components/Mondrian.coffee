@@ -5,9 +5,55 @@ class Mondrian
   constructor: (id) ->
     @$canvas = $(id)
     @$parent = @$canvas.parent()
+    @speed =
+      value: 3000
+      min: 300
+      max: 5000
+    @status = 'stop'
 
     @refresh()
     @bind()
+    return @
+
+  getSpeedRatio: ->
+    return (@speed.value -  @speed.min) / (@speed.max -  @speed.min)
+
+  getSpeed: ->
+    return @speed.value
+
+  setSpeed: (percent) ->
+    percent ?= Math.random()
+    @speed.value = Math.floor((percent * (@speed.max - @speed.min)) + @speed.min)
+    @updateSpeed()
+    return @
+
+  updateSpeed: ->
+    @status = 'starting'
+    @stop()
+    @start()
+    @status = 'started'
+    return @
+
+  hide: ->
+    @stop()
+    @$canvas.fadeOut(300).hide()
+    return @
+
+  show: ->
+    @updateSpeed()
+    @$canvas.fadeIn(300).show()
+    return @
+
+  start: ->
+    @timer = setInterval( =>
+      @refresh()
+    , @speed.value )
+    @status = 'started'
+    return @
+
+  stop: ->
+    clearInterval(@timer)
+    @status = 'stopped'
     return @
 
   compose: ->
@@ -21,6 +67,7 @@ class Mondrian
   refresh: ->
     @$canvas.attr('width', @$parent.width())
     @$canvas.attr('height', @$parent.height())
+    @compose()
     return @
 
   bind: ->
@@ -28,7 +75,8 @@ class Mondrian
       @refresh()
     )
     @$canvas.on('click', =>
-      @compose()
+      if @status == 'stopped'
+        @compose()
     )
     return @
 

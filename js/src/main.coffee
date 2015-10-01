@@ -25,10 +25,10 @@ $( ->
       $('body').addClass('device-other')
 
     splash = new Splash()
-    controls = new Ui('#ui', Colorswitch, '#color')
-    window.mondiran = new Mondrian('#mondiran')
-    
-    mondiran.compose()
+    window.controls = new Ui('#ui', [
+      {id: 'color', class: Colorswitch, selector: '#color'},
+      {id: 'mondrian', class: Mondrian, selector: '#mondrian'}
+    ])
 
     setTimeout(->
       splash.close()

@@ -1,4 +1,4 @@
-var canvas = document.getElementById('mondiran');
+var canvas = document.getElementById('mondrian');
 var context = canvas.getContext('2d');
 clearCanvas();composition();
 
@@ -23,7 +23,7 @@ document.getElementById('save').addEventListener('click', saveCanvas, false);
 function composition() {
 
   colors = ['#ff0000', '#0000ff', '#ffff00', '#ffffff'];
-  var canvas = document.getElementById('mondiran');
+  var canvas = document.getElementById('mondrian');
   var context = canvas.getContext('2d');
 
   // random number of horizontal and vertical lines
