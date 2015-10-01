@@ -21,10 +21,15 @@ class Mondrian
   refresh: ->
     @$canvas.attr('width', @$parent.width())
     @$canvas.attr('height', @$parent.height())
+    return @
 
   bind: ->
     $(window).on('resize', =>
       @refresh()
     )
+    @$canvas.on('click', =>
+      @compose()
+    )
+    return @
 
 module?.exports = Mondrian
