@@ -4,6 +4,11 @@
   &.ui-isauto {
     .ui-auto { top: 0; }
   }
-
+  .horizontal-list > * {
+    margin: 0 5px;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
 }
 .ui-control, .ui-control * { font-weight: $fw-bold; }
+.ui-control-range { width: 60px; }

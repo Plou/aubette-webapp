@@ -1,5 +1,5 @@
 .help {
-  margin: 0 auto 30px; max-width: 260px;
+  margin: 0 auto 5px; max-width: 260px;
 
   @media screen and #{$media-landscape} {
     margin: 0 0 30px;
@@ -16,17 +16,23 @@
 .help-list {
   margin: 0; padding: 0; list-style: none;
 
-  .help-item { display: block; margin: 0 0 20px; padding: 0; list-style: none; vertical-align: middle;
-    @media screen and #{$media-landscape} {
-      margin: 10px 0;
-
-      .device-standalone & { margin: 15px 0; }
-    }
-    @media screen and #{$media-squeezed} {
-      margin: 5px 0;
-    }
+  .help-item { display: block; margin: 0 0 15px; padding: 0; list-style: none; vertical-align: middle;
     &.help-icon,
     &.help-label { margin-bottom: 20px; }
+
+    @media screen and #{$media-landscape} {
+      margin: 5px 0;
+
+      &.help-icon,
+      &.help-label { margin-bottom: 5px; }
+
+      .device-standalone & { margin: 10px 0; }
+    }
+    @media screen and #{$media-squeezed} {
+      margin: 2px 0;
+      &.help-icon,
+      &.help-label { margin-bottom: 2px; }
+    }
   }
 
   .help-icon { display: inline-block; box-sizing: border-box; margin: 0 20px 0 0; width: 56px; height: 30px; text-align: center;
