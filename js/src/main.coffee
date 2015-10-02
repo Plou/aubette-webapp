@@ -1,3 +1,4 @@
+window.$ = window.jQuery = require('../vendors/jquery-1.11.2.min.js')
 # Helpers
 #
 # getHash = require './components/getHash.coffee'

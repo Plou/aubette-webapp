@@ -54,7 +54,7 @@ class Ui
 
     @screen.show()
 
-    if @mode == "manual"
+    if @mode == 'manual'
       @setManual()
     return @
 

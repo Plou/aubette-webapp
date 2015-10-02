@@ -1,8 +1,8 @@
-controls = require('../../vendors/mondrian-generator.js')
 
 class Mondrian
 
   constructor: (id) ->
+    @controls = require('../../vendors/mondrian-generator.js')
     @$canvas = $(id)
     @$parent = @$canvas.parent()
     @speed =
@@ -57,11 +57,11 @@ class Mondrian
     return @
 
   compose: ->
-    controls.compose()
+    @controls.compose()
     return @
 
   clear: ->
-    controls.clear()
+    @controls.clear()
     return @
 
   refresh: ->
